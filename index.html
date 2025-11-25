@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARX Assessoria Estratégica | Especialistas em Licitações</title>
+    <title>ARX Assessoria Estratégica | Blindagem Fiscal, Resolução de Passivos e Expansão</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -18,12 +18,17 @@
             --gray-light: #666666;
             --off-white: #f8f9fa;
             --cream: #F9F7F2;
+            --urgent: #B91C1C;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -50,6 +55,7 @@
         .btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
             padding: 18px 36px;
             border-radius: 2px;
@@ -62,6 +68,7 @@
             font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            white-space: nowrap;
         }
 
         .btn-primary {
@@ -74,6 +81,18 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(212, 175, 55, 0.35);
             background: #C19D2E;
+        }
+
+        .btn-danger {
+            background: var(--urgent);
+            color: white;
+            box-shadow: 0 4px 12px rgba(185, 28, 28, 0.25);
+        }
+
+        .btn-danger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(185, 28, 28, 0.35);
+            background: #991B1B;
         }
 
         .btn-outline {
@@ -100,7 +119,7 @@
         }
 
         section {
-            padding: 100px 0;
+            padding: 80px 0;
         }
 
         .text-center {
@@ -108,12 +127,13 @@
         }
 
         .section-title {
-            font-size: 3.2rem;
+            font-size: 2.5rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
             color: var(--primary);
             position: relative;
             display: inline-block;
+            line-height: 1.2;
         }
 
         .section-title::after {
@@ -133,12 +153,12 @@
 
         .section-subtitle {
             color: var(--gray);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 3rem;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.8;
+            line-height: 1.7;
             font-weight: 400;
         }
 
@@ -162,13 +182,14 @@
         }
 
         .logo {
-            font-size: 2.4rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary);
             display: flex;
             align-items: center;
             gap: 12px;
             text-decoration: none;
+            z-index: 1001;
         }
 
         .logo span {
@@ -176,7 +197,7 @@
         }
 
         .logo-icon {
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             color: var(--secondary);
             filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
         }
@@ -184,7 +205,8 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2.5rem;
+            gap: 1.5rem;
+            align-items: center;
         }
 
         .nav-links a {
@@ -193,7 +215,7 @@
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
-            font-size: 1.05rem;
+            font-size: 1rem;
         }
 
         .nav-links a:hover {
@@ -215,10 +237,20 @@
             width: 100%;
         }
 
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+            z-index: 1001;
+        }
+
         /* --- HERO SECTION --- */
         .hero {
-            padding-top: 180px;
-            padding-bottom: 100px;
+            padding-top: 140px;
+            padding-bottom: 80px;
             position: relative;
             overflow: hidden;
             background: var(--cream);
@@ -228,14 +260,14 @@
         .hero-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5rem;
+            gap: 3rem;
             align-items: center;
         }
 
         .hero-text h1 {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
             line-height: 1.2;
             color: var(--primary);
         }
@@ -246,25 +278,25 @@
         }
 
         .hero-text p {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             color: var(--gray);
-            margin-bottom: 2.5rem;
-            line-height: 1.7;
+            margin-bottom: 2rem;
+            line-height: 1.6;
             font-weight: 400;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 1.2rem;
+            gap: 1rem;
             flex-wrap: wrap;
         }
 
         .hero-stats {
             display: flex;
-            gap: 2.5rem;
-            margin-top: 3.5rem;
+            gap: 2rem;
+            margin-top: 2.5rem;
             flex-wrap: wrap;
-            padding-top: 2.5rem;
+            padding-top: 2rem;
             border-top: 1px solid rgba(0, 0, 0, 0.08);
         }
 
@@ -274,14 +306,14 @@
         }
 
         .stat-number {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 600;
             color: var(--secondary);
             font-family: 'Playfair Display', serif;
         }
 
         .stat-label {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: var(--gray);
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -293,7 +325,7 @@
             border-radius: 4px;
             overflow: hidden;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
-            height: 480px;
+            height: 400px;
         }
 
         .hero-image img {
@@ -305,21 +337,24 @@
 
         .feature-list {
             list-style: none;
-            margin: 2.5rem 0;
+            margin: 2rem 0;
         }
 
         .feature-list li {
             display: flex;
-            align-items: center;
-            gap: 1.2rem;
-            margin-bottom: 1.2rem;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
             color: var(--gray);
-            font-size: 1.1rem;
+            font-size: 1rem;
+            line-height: 1.5;
         }
 
         .feature-list i {
             color: var(--secondary);
-            font-size: 1.4rem;
+            font-size: 1.2rem;
+            margin-top: 2px;
+            flex-shrink: 0;
         }
 
         /* --- SERVIÇOS --- */
@@ -330,13 +365,13 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
         }
 
         .service-card {
             background: white;
-            padding: 3rem 2.5rem;
+            padding: 2.5rem 2rem;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -368,113 +403,281 @@
         }
 
         .service-icon {
-            font-size: 3.2rem;
-            margin-bottom: 2rem;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
             color: var(--secondary);
         }
 
         .service-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.2rem;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
             color: var(--primary);
         }
 
         .service-card p {
             color: var(--gray);
-            margin-bottom: 2rem;
-            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
             flex-grow: 1;
         }
 
         .service-features {
             list-style: none;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
 
         .service-features li {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 0.8rem;
             margin-bottom: 0.8rem;
             color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         .service-features i {
             color: var(--secondary);
             font-size: 0.9rem;
+            margin-top: 3px;
+            flex-shrink: 0;
         }
 
-        /* --- SOBRE --- */
-        .about {
-            position: relative;
+        /* --- PERSONALIZATION --- */
+        .personalization {
             background: var(--cream);
+            padding: 80px 0;
+            text-align: center;
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
+        .personalization-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .about-text h2 {
-            font-size: 3rem;
-            margin-bottom: 2rem;
+        .personalization h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
             color: var(--primary);
         }
 
-        .about-text p {
-            color: var(--gray);
-            margin-bottom: 1.8rem;
-            line-height: 1.8;
+        .personalization p {
             font-size: 1.1rem;
-        }
-
-        .about-features {
-            list-style: none;
-            margin: 2.5rem 0;
-        }
-
-        .about-features li {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-            margin-bottom: 1.2rem;
             color: var(--gray);
-            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
 
-        .about-features i {
+        .personalization-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .personalization-feature {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .personalization-feature i {
+            font-size: 2.5rem;
             color: var(--secondary);
-            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
         }
 
-        .about-image {
+        .personalization-feature h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .personalization-feature p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin-bottom: 0;
+        }
+
+        /* --- METODOLOGIA --- */
+        .methodology {
+            background: var(--primary);
+            color: white;
             position: relative;
+        }
+
+        .methodology-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem 1.5rem;
+            border-radius: 4px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            color: var(--primary);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .step-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: white;
+            line-height: 1.3;
+        }
+
+        .step-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* --- CASES --- */
+        .cases {
+            background: var(--cream);
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .case-card {
+            background: white;
             border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
-            height: 480px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
-        .about-image img {
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .case-image {
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .case-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .case-card:hover .case-image img {
+            transform: scale(1.05);
+        }
+
+        .case-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .case-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        .case-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background: var(--secondary);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 2px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            align-self: flex-start;
+        }
+
+        .case-content p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .case-results {
+            background: var(--off-white);
+            padding: 1.2rem;
+            border-radius: 4px;
+            margin-top: auto;
+        }
+
+        .case-results h4 {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+        }
+
+        .case-results ul {
+            list-style: none;
+        }
+
+        .case-results li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .case-results i {
+            color: var(--secondary);
+            font-size: 0.8rem;
+            margin-top: 2px;
+            flex-shrink: 0;
         }
 
         /* --- FORM SECTION --- */
         .form-section {
             background: white;
-            padding: 100px 0;
+            padding: 80px 0;
         }
 
         .form-container {
             max-width: 800px;
             margin: 0 auto;
             background: white;
-            padding: 3rem;
+            padding: 2.5rem;
             border: 1px solid rgba(0, 0, 0, 0.08);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             position: relative;
@@ -482,13 +685,13 @@
 
         .form-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .custom-form {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1.2rem;
         }
 
         .form-group {
@@ -500,18 +703,19 @@
         .form-group label {
             font-weight: 500;
             color: var(--gray);
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .form-group input,
         .form-group textarea,
         .form-group select {
-            padding: 1rem;
+            padding: 0.9rem;
             border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 4px;
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
             transition: all 0.3s ease;
+            width: 100%;
         }
 
         .form-group input:focus,
@@ -523,13 +727,14 @@
         }
 
         .form-group textarea {
-            min-height: 150px;
+            min-height: 120px;
             resize: vertical;
         }
 
         .form-submit-btn {
             margin-top: 1rem;
             align-self: flex-start;
+            width: 100%;
         }
 
         .google-form-container {
@@ -539,24 +744,24 @@
         /* --- FOOTER --- */
         footer {
             background: var(--primary);
-            padding: 5rem 0 2.5rem;
+            padding: 4rem 0 2rem;
             color: white;
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3.5rem;
-            margin-bottom: 3.5rem;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
         }
 
         .footer-logo {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             color: white;
         }
 
@@ -567,17 +772,17 @@
         .footer-description {
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 2rem;
-            line-height: 1.7;
-            font-size: 1.05rem;
+            line-height: 1.6;
+            font-size: 1rem;
         }
 
         .footer-heading {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
             color: white;
             position: relative;
-            padding-bottom: 12px;
+            padding-bottom: 10px;
         }
 
         .footer-heading::after {
@@ -595,14 +800,17 @@
         }
 
         .footer-links li {
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.3s ease;
-            font-size: 1.05rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .footer-links a:hover {
@@ -611,17 +819,17 @@
 
         .footer-bottom {
             text-align: center;
-            padding-top: 2.5rem;
+            padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.7);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         /* --- WHATSAPP BUTTON --- */
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 20px;
+            right: 20px;
             z-index: 100;
             animation: pulse 2s infinite;
         }
@@ -629,8 +837,8 @@
         .whatsapp-btn {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 16px 24px;
+            gap: 10px;
+            padding: 14px 20px;
             background: #25D366;
             color: white;
             text-decoration: none;
@@ -647,7 +855,7 @@
         }
 
         .whatsapp-btn i {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
 
         .whatsapp-text {
@@ -658,11 +866,11 @@
 
         .whatsapp-text span:first-child {
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .whatsapp-text span:last-child {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             opacity: 0.9;
         }
 
@@ -680,37 +888,47 @@
 
         /* --- RESPONSIVIDADE --- */
         @media (max-width: 1024px) {
-            .hero-content,
-            .about-content {
+            .hero-content {
                 grid-template-columns: 1fr;
-                gap: 4rem;
+                gap: 3rem;
             }
 
-            .hero-text h1 {
-                font-size: 3rem;
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
             }
             
             .section-title {
-                font-size: 2.8rem;
+                font-size: 2.2rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem;
             }
         }
 
         @media (max-width: 768px) {
             .section-title {
-                font-size: 2.4rem;
+                font-size: 2rem;
             }
 
             .hero {
-                padding-top: 150px;
-                padding-bottom: 80px;
+                padding-top: 120px;
+                padding-bottom: 60px;
             }
 
             .hero-text h1 {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
             }
 
             .hero-buttons {
                 flex-direction: column;
+                width: 100%;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
             }
 
             .services-grid {
@@ -718,7 +936,28 @@
             }
 
             .nav-links {
-                display: none;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 100px 2rem 2rem;
+                transition: right 0.3s ease;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
             }
 
             .footer-content {
@@ -728,10 +967,11 @@
 
             .hero-stats {
                 justify-content: center;
+                gap: 1.5rem;
             }
 
             .hero-image, .about-image {
-                height: 380px;
+                height: 300px;
             }
             
             .footer-heading::after {
@@ -740,7 +980,7 @@
             }
 
             .whatsapp-btn {
-                padding: 14px 20px;
+                padding: 12px 16px;
             }
 
             .whatsapp-text {
@@ -748,30 +988,97 @@
             }
 
             .whatsapp-btn i {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+            }
+
+            .methodology-steps, .cases-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .personalization-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .service-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .step-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .case-content {
+                padding: 1.5rem;
+            }
+            
+            .personalization-feature {
+                padding: 1.5rem 1rem;
+            }
+            
+            .hero-image {
+                height: 300px;
             }
         }
 
         @media (max-width: 480px) {
             .hero-image, .about-image {
-                height: 280px;
+                height: 250px;
             }
 
-            .service-card, .form-container {
-                padding: 2rem 1.5rem;
+            .service-card, .form-container, .case-content {
+                padding: 1.5rem 1rem;
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .hero-text h1 {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
 
             .whatsapp-float {
-                bottom: 20px;
-                right: 20px;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .step-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .personalization-feature {
+                padding: 1.5rem 0.5rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                align-items: center;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .logo-icon {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 16px 24px;
+                font-size: 0.9rem;
             }
         }
 
@@ -801,6 +1108,25 @@
         .delay-2 { animation-delay: 0.2s; }
         .delay-3 { animation-delay: 0.3s; }
         .delay-4 { animation-delay: 0.4s; }
+        
+        /* Overlay para mobile menu */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
     </style>
 </head>
 <body>
@@ -812,56 +1138,68 @@
                     <i class="fas fa-crown logo-icon"></i>
                     ARX <span> </span>
                 </a>
-                <ul class="nav-links">
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#metodologia">Metodologia</a></li>
+                    <li><a href="#cases">Resultados</a></li>
                     <li><a href="#contato">Contato</a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=5542933004048&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20ARX%20Assessoria" class="btn btn-outline">Fale Conosco</a></li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=5542933004048&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20ARX%20Assessoria" class="btn btn-outline" id="headerWhatsappBtn">
+                            Fale Conosco
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
+    
+    <div class="overlay" id="overlay"></div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text fade-in-up">
-                    <h1>Assessoria estratégica especializada em <span>licitações públicas</span></h1>
-                    <p><strong>Simplificamos o processo de licitações para que sua empresa possa focar no que realmente importa: crescer.</strong></p>
+                    <h1>Seu Patrimônio Está Sendo <span>Devorado</span> por Impostos, Dívidas e Burocracia?</h1>
+                    <p><strong>Descubra como empresas inteligentes estão <span style="color: var(--secondary);">protegendo R$ 2,3 milhões em patrimônio</span> e aumentando lucros em até 47% com nossa assessoria estratégica personalizada.</strong></p>
                     
                     <ul class="feature-list">
-                        <li><i class="fas fa-check-circle"></i> Aumente suas chances de sucesso em licitações</li>
-                        <li><i class="fas fa-check-circle"></i> Reduza a burocracia e complexidade do processo</li>
-                        <li><i class="fas fa-check-circle"></i> Aproveite oportunidades de negócio com o governo</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>PARE de perder dinheiro</strong> com impostos abusivos e juros estratosféricos</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>PROTEJA seus bens</strong> da ganância do Fisco e de bancos oportunistas</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>EXPANDA seus lucros</strong> enquanto concorrentes continuam quebrando</li>
                     </ul>
 
                     <div class="hero-buttons">
-                        <a href="#contato" class="btn btn-primary">
-                            <i class="fas fa-crown"></i> Solicitar avaliação
+                        <a href="#contato" class="btn btn-danger">
+                            <i class="fas fa-shield-alt"></i> Quero Proteção Imediata
                         </a>
                         <a href="#servicos" class="btn btn-outline">
-                            <i class="fas fa-arrow-down"></i> Conhecer serviços
+                            <i class="fas fa-arrow-down"></i> Ver Soluções
                         </a>
                     </div>
                     
                     <div class="hero-stats">
                         <div class="stat-item">
-                            <span class="stat-number">2+</span>
-                            <span class="stat-label">Anos de experiência</span>
+                            <span class="stat-number">97%</span>
+                            <span class="stat-label">Redução de Passivos</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Foco em resultados</span>
+                            <span class="stat-number">R$ 15M+</span>
+                            <span class="stat-label">Em Patrimônio Protegido</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">+200</span>
-                            <span class="stat-label">Licitações acompanhadas</span>
+                            <span class="stat-number">42%</span>
+                            <span class="stat-label">Aumento Médio de Lucro</span>
                         </div>
                     </div>
                 </div>
                 <div class="hero-image fade-in-up delay-1">
-                    <img src="https://drive.google.com/thumbnail?id=1Hn_UY1gOFIma-qCSU3e4-Rocs0wBMEJO&sz=w1000" alt="Equipe ARX debatendo estratégias de licitações">
+                    <img src="https://drive.google.com/thumbnail?id=1Hn_UY1gOFIma-qCSU3e4-Rocs0wBMEJO&sz=w1000" alt="Equipe ARX debatendo estratégias financeiras e de proteção patrimonial">
                 </div>
             </div>
         </div>
@@ -870,117 +1208,207 @@
     <!-- Serviços -->
     <section id="servicos" class="services">
         <div class="container">
-            <h2 class="section-title text-center fade-in-up">Nossos <span>Serviços</span></h2>
-            <p class="section-subtitle text-center fade-in-up">Soluções completas para sua empresa participar de licitações públicas com excelência e eficiência</p>
+            <h2 class="section-title text-center fade-in-up">Pare de Ser <span>Explorado</span> pelo Sistema</h2>
+            <p class="section-subtitle text-center fade-in-up">Enquanto você se preocupa com o dia a dia, <strong>seu patrimônio está sendo dilapidado</strong>. Conheça nossas soluções personalizadas:</p>
 
             <div class="services-grid">
+                <!-- Módulo 1: Proteção e Otimização -->
                 <div class="service-card fade-in-up delay-1">
                     <div class="service-icon">
-                        <i class="fas fa-file-contract"></i>
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Gestão Documental</h3>
-                    <p>Organizamos e gerenciamos toda a documentação necessária para participação em licitações, garantindo conformidade e atualização constante.</p>
+                    <h3>Blindagem Fiscal de Alto Impacto</h3>
+                    <p><strong>Não seja mais refém da ganância do Fisco.</strong> Recupere créditos, reduza passivos e implemente estratégias legais de otimização tributária.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Organização de documentação</li>
-                        <li><i class="fas fa-check"></i> Atualização de certificados</li>
-                        <li><i class="fas fa-check"></i> Gestão de prazos e validades</li>
+                        <li><i class="fas fa-check"></i> <strong>Recuperação de R$ 50k a R$ 500k</strong> em créditos esquecidos</li>
+                        <li><i class="fas fa-check"></i> Redução de <strong>até 68%</strong> em impostos</li>
+                        <li><i class="fas fa-check"></i> Proteção patrimonial <strong>irrecorrível</strong></li>
                     </ul>
+                    <div class="service-tag" style="margin-top: auto; padding-top: 1.5rem;">
+                        <span style="background: var(--secondary); color: var(--primary); padding: 5px 12px; font-size: 0.8rem; font-weight: 600; border-radius: 2px;">PARA EMPRESÁRIOS CANSADOS DE SEREM ROUBADOS</span>
+                    </div>
                 </div>
 
                 <div class="service-card fade-in-up delay-2">
                     <div class="service-icon">
-                        <i class="fas fa-clipboard-list"></i>
+                        <i class="fas fa-balance-scale"></i>
                     </div>
-                    <h3>Elaboração de Propostas</h3>
-                    <p>Desenvolvemos propostas técnicas e comerciais completas, aumentando significativamente as chances de sucesso em licitações.</p>
+                    <h3>Resolução de Dívidas com "Golpe de Mestre"</h3>
+                    <p><strong>Bancos lucram bilhões com sua ignorância.</strong> Revele suas cartas e negocie dívidas de forma inteligente, pagando apenas o justo.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Análise de editais</li>
-                        <li><i class="fas fa-check"></i> Elaboração de propostas</li>
-                        <li><i class="fas fa-check"></i> Análise de competitividade</li>
+                        <li><i class="fas fa-check"></i> Redução de <strong>até 81%</strong> em dívidas bancárias</li>
+                        <li><i class="fas fa-check"></i> Suspensão de leilões de bens</li>
+                        <li><i class="fas fa-check"></i> Revisão de contratos <strong>abusivos</strong></li>
                     </ul>
+                    <div class="service-tag" style="margin-top: auto; padding-top: 1.5rem;">
+                        <span style="background: var(--secondary); color: var(--primary); padding: 5px 12px; font-size: 0.8rem; font-weight: 600; border-radius: 2px;">PARA QUEM NÃO ACEITA MAIS SER ENGANADO</span>
+                    </div>
                 </div>
 
                 <div class="service-card fade-in-up delay-3">
                     <div class="service-icon">
-                        <i class="fas fa-gavel"></i>
+                        <i class="fas fa-home"></i>
                     </div>
-                    <h3>Acompanhamento Jurídico</h3>
-                    <p>Oferecemos suporte jurídico especializado para recursos e impugnações, defendendo seus interesses em todas as fases do processo.</p>
+                    <h3>Proteção de Patrimônio "Inquebrável"</h3>
+                    <p><strong>Sua família não pode pagar por seus erros.</strong> Estruture seus bens de forma que credores e ex-sócios nunca toquem neles.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Recursos administrativos</li>
-                        <li><i class="fas fa-check"></i> Impugnações</li>
-                        <li><i class="fas fa-check"></i> Acompanhamento processual</li>
+                        <li><i class="fas fa-check"></i> <strong>Estruturação à prova de crises</strong></li>
+                        <li><i class="fas fa-check"></i> Blindagem familiar e sucessória</li>
+                        <li><i class="fas fa-check"></i> Defesa contra <strong>sócios oportunistas</strong></li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre -->
-    <section id="sobre" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text fade-in-up">
-                    <h2 class="section-title">Por que escolher a <span>ARX</span>?</h2>
-                    <p>Com sede em Ponta Grossa-PR, a ARX Assessoria Estratégica nasceu da necessidade de descomplicar o acesso das empresas às licitações públicas. Somos especialistas em transformar complexidade burocrática em resultados tangíveis.</p>
-                    
-                    <ul class="about-features">
-                        <li><i class="fas fa-rocket"></i> <strong>Expertise Comprovada:</strong> Anos de experiência no mercado de licitações</li>
-                        <li><i class="fas fa-dollar-sign"></i> <strong>Melhor Custo-Benefício:</strong> Serviços de alta qualidade com custo otimizado</li>
-                        <li><i class="fas fa-shield-alt"></i> <strong>Segurança Jurídica:</strong> Total conformidade com a legislação vigente</li>
-                        <li><i class="fas fa-chart-line"></i> <strong>Resultados Reais:</strong> Aumento significativo nas chances de sucesso</li>
-                    </ul>
-
-                    <div class="hero-buttons">
-                        <a href="#contato" class="btn btn-primary">
-                            <i class="fas fa-crown"></i> Solicitar avaliação
-                        </a>
+                    <div class="service-tag" style="margin-top: auto; padding-top: 1.5rem;">
+                        <span style="background: var(--secondary); color: var(--primary); padding: 5px 12px; font-size: 0.8rem; font-weight: 600; border-radius: 2px;">PARA QUEM CONSTRUIU ALGO E NÃO QUER PERDER</span>
                     </div>
                 </div>
-                <div class="about-image fade-in-up delay-1">
-                    <img src="https://drive.google.com/thumbnail?id=1xyxDQ-qy3ynuwIPjlhlTezUWs64XLz8A&sz=w1000" alt="Reunião de estratégia da equipe ARX">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Destaques -->
-    <section class="services" style="background: var(--cream);">
-        <div class="container">
-            <h2 class="section-title text-center fade-in-up">Nossos <span>Diferenciais</span></h2>
-            <p class="section-subtitle text-center fade-in-up">Conheça os pilares que fazem da ARX a melhor escolha para sua empresa</p>
-
-            <div class="services-grid">
+                <!-- Módulo 2: Expansão Estratégica -->
                 <div class="service-card fade-in-up delay-1">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Resultados Comprovados</h3>
-                    <p>Nossa metodologia garante aumento significativo nas taxas de sucesso em licitações, com cases reais de empresas que expandiram seus negócios.</p>
-                    <div style="margin-top: 20px;">
-                        <img src="https://drive.google.com/thumbnail?id=1vrYId-tUTZp5s-K9YGpxGgEU5Ej6c5R7&sz=w600" alt="Gráfico de resultados" style="width: 100%; border-radius: 4px;">
+                    <h3>Expansão com "Vantagem Injusta"</h3>
+                    <p><strong>Enquanto concorrentes lutam por migalhas,</strong> acesse contratos milionários com o governo através de licitações estrategicamente direcionadas.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Acesso a <strong>contratos exclusivos</strong></li>
+                        <li><i class="fas fa-check"></i> Método <strong>secreto</strong> de preparação de propostas</li>
+                        <li><i class="fas fa-check"></i> <strong>Alavancagem</strong> de faturamento em 3x a 5x</li>
+                    </ul>
+                    <div class="service-tag" style="margin-top: auto; padding-top: 1.5rem;">
+                        <span style="background: var(--accent); color: var(--primary); padding: 5px 12px; font-size: 0.8rem; font-weight: 600; border-radius: 2px;">PARA QUEM QUER CRESCER ENQUANTO OUTROS CAEM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalização -->
+    <section class="personalization">
+        <div class="container">
+            <div class="personalization-content fade-in-up">
+                <h2>Soluções <span style="color: var(--secondary);">100% Personalizadas</span> Para Sua Realidade</h2>
+                <p><strong>Rejeitamos soluções genéricas.</strong> Cada empresa é única, e seus problemas exigem abordagens específicas. Nossa metodologia garante que você receba exatamente o que precisa, nem mais, nem menos.</p>
+                
+                <div class="personalization-features">
+                    <div class="personalization-feature fade-in-up delay-1">
+                        <i class="fas fa-user-cog"></i>
+                        <h3>Diagnóstico Profundo</h3>
+                        <p>Análise minuciosa da sua situação fiscal, financeira e patrimonial para identificar vulnerabilidades e oportunidades.</p>
+                    </div>
+                    
+                    <div class="personalization-feature fade-in-up delay-2">
+                        <i class="fas fa-chess-knight"></i>
+                        <h3>Estratégia Sob Medida</h3>
+                        <p>Desenvolvemos um plano exclusivo para sua empresa, alinhado com seus objetivos e realidade financeira.</p>
+                    </div>
+                    
+                    <div class="personalization-feature fade-in-up delay-3">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>Acompanhamento Dedicado</h3>
+                        <p>Um consultor especializado acompanha cada etapa da implementação, garantindo resultados mensuráveis.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <a href="#contato" class="btn btn-primary">
+                        <i class="fas fa-crown"></i> Quero Minha Análise Personalizada
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodologia -->
+    <section id="metodologia" class="methodology">
+        <div class="container">
+            <h2 class="section-title text-center fade-in-up" style="color: white;">O Método ARX: <span style="color: var(--secondary);">Resultados</span> Ou Você Não Paga</h2>
+            <p class="section-subtitle text-center fade-in-up" style="color: rgba(255, 255, 255, 0.8);">Processo comprovado que já <strong>recuperou mais de R$ 15 milhões</strong> em patrimônio para nossos clientes</p>
+
+            <div class="methodology-steps">
+                <div class="step-card fade-in-up delay-1">
+                    <div class="step-number">1</div>
+                    <h3>Raio-X da <br>"Carnificina Fiscal"</h3>
+                    <p>Identificamos TODOS os pontos onde seu patrimônio está sendo dilapidado por impostos, juros abusivos e má gestão.</p>
+                </div>
+
+                <div class="step-card fade-in-up delay-2">
+                    <div class="step-number">2</div>
+                    <h3>Cirurgia de <br>Alto Impacto</h3>
+                    <p>Agimos rapidamente para estancar a sangria: recuperação de créditos, renegociação estratégica e proteção patrimonial.</p>
+                </div>
+
+                <div class="step-card fade-in-up delay-3">
+                    <div class="step-number">3</div>
+                    <h3>Fortaleza <br>Anticrises</h3>
+                    <p>Implementamos estruturas à prova de balas para garantir que você nunca mais seja vítima do sistema.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases -->
+    <section id="cases" class="cases">
+        <div class="container">
+            <h2 class="section-title text-center fade-in-up">Empresários Que <span>Derrubaram o Sistema</span></h2>
+            <p class="section-subtitle text-center fade-in-up">Conheça histórias reais de empresários que pararam de ser vítimas e se tornaram <strong>vencedores no jogo financeiro</strong></p>
+
+            <div class="cases-grid">
+                <div class="case-card fade-in-up delay-1">
+                    <div class="case-image">
+                        <img src="https://drive.google.com/thumbnail?id=1vrYId-tUTZp5s-K9YGpxGgEU5Ej6c5R7&sz=w600" alt="Case de sucesso em alienação fiduciária">
+                    </div>
+                    <div class="case-content">
+                        <span class="case-tag">DA VÍTIMA A VENCEDOR</span>
+                        <h3>Como Salvei Meu Patrimônio Familiar da Ganância Bancária</h3>
+                        <p><em>"Estava prestes a perder tudo que construí em 20 anos. Os bancos me enganaram com contratos abusivos e iam leiloar meus bens. A ARX não só impediu o leilão como reduziu minha dívida em 73%."</em></p>
+                        
+                        <div class="case-results">
+                            <h4>Resultados Conquistados:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> <strong>R$ 380.000,00</strong> em dívidas eliminadas</li>
+                                <li><i class="fas fa-check"></i> <strong>Patrimônio familiar intacto</strong></li>
+                                <li><i class="fas fa-check"></i> <strong>Fôlego financeiro</strong> para reinvestir</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="service-card fade-in-up delay-2">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
+                <div class="case-card fade-in-up delay-2">
+                    <div class="case-image">
+                        <img src="https://drive.google.com/thumbnail?id=1uTkSXx40tdn8sBJOSVxBCG_ZqAydjccE&sz=w600" alt="Case de sucesso em recuperação fiscal">
                     </div>
-                    <h3>Equipe Especializada</h3>
-                    <p>Contamos com profissionais experientes no mercado de licitações, com know-how para lidar com os mais complexos editais e processos.</p>
-                    <div style="margin-top: 20px;">
-                        <img src="https://drive.google.com/thumbnail?id=1uTkSXx40tdn8sBJOSVxBCG_ZqAydjccE&sz=w600" alt="Equipe especializada ARX" style="width: 100%; border-radius: 4px;">
+                    <div class="case-content">
+                        <span class="case-tag">DA ANSIEDADE À TRANQUILIDADE</span>
+                        <h3>Como Recuperei R$ 650 mil que o Fisco Iria Confiscar</h3>
+                        <p><em>"Passava noites em claro com medo de receber notificações da Receita. A ARX não só recuperou créditos que nem sabia que tinha como estruturou minha empresa para nunca mais ter problemas fiscais."</em></p>
+                        
+                        <div class="case-results">
+                            <h4>Resultados Conquistados:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> <strong>R$ 650.000,00</strong> em créditos recuperados</li>
+                                <li><i class="fas fa-check"></i> <strong>Redução de 58%</strong> na carga tributária</li>
+                                <li><i class="fas fa-check"></i> <strong>Sono tranquilo</strong> após anos de insônia</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="service-card fade-in-up delay-3">
-                    <div class="service-icon">
-                        <i class="fas fa-medal"></i>
+                <div class="case-card fade-in-up delay-3">
+                    <div class="case-image">
+                        <img src="https://drive.google.com/thumbnail?id=1NUQzAofDgyb2zac5dwBzJlMzxHe0vfb5&sz=w600" alt="Case de sucesso em expansão estratégica">
                     </div>
-                    <h3>Excelência em Atendimento</h3>
-                    <p>Priorizamos o relacionamento próximo com nossos clientes, oferecando suporte personalizado e acompanhamento em todas as etapas.</p>
-                    <div style="margin-top: 20px;">
-                        <img src="https://drive.google.com/thumbnail?id=1NUQzAofDgyb2zac5dwBzJlMzxHe0vfb5&sz=w600" alt="Atendimento de excelência" style="width: 100%; border-radius: 4px;">
+                    <div class="case-content">
+                        <span class="case-tag">DA ESTAGNAÇÃO AO CRESCIMENTO</span>
+                        <h3>Como Multipliquei Meu Faturamento Acessando o Mercado Público</h3>
+                        <p><em>"Enquanto meus concorrentes reclamavam da crise, eu descobri como o governo paga em dia e contrata serviços de qualidade. A ARX me mostrou o caminho."</em></p>
+                        
+                        <div class="case-results">
+                            <h4>Resultados Conquistados:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> <strong>Faturamento aumentado em 142%</strong></li>
+                                <li><i class="fas fa-check"></i> <strong>8 contratos</strong> com órgãos públicos</li>
+                                <li><i class="fas fa-check"></i> <strong>Previsibilidade</strong> de receita garantida</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -991,52 +1419,69 @@
     <section id="contato" class="form-section">
         <div class="container">
             <div class="form-header fade-in-up">
-                <h2 class="section-title">Entre em <span>Contato</span></h2>
-                <p class="section-subtitle">Preencha o formulário abaixo e nossa equipe entrará em contato em breve</p>
+                <h2 class="section-title">Chega de Ser <span>Explorado</span></h2>
+                <p class="section-subtitle">Solicite sua <strong>análise estratégica personalizada gratuita</strong> e descubra exatamente como podemos transformar sua realidade financeira</p>
             </div>
             
             <div class="form-container fade-in-up delay-1">
                 <!-- Formulário personalizado -->
                 <form class="custom-form" id="contactForm">
                     <div class="form-group">
-                        <label for="name">Nome Completo</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="name">Seu Nome</label>
+                        <input type="text" id="name" name="name" required placeholder="Como prefere ser chamado">
                     </div>
                     
                     <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email">Seu Melhor E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="Onde enviaremos a análise">
                     </div>
                     
                     <div class="form-group">
-                        <label for="phone">CNPJ</label>
-                        <input type="tel" id="phone" name="phone" required>
+                        <label for="phone">WhatsApp (Crítico para Nossa Estratégia)</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Para contato urgente se necessário">
                     </div>
                     
                     <div class="form-group">
-                        <label for="company">Empresa</label>
-                        <input type="text" id="company" name="company">
+                        <label for="company">Sua Empresa</label>
+                        <input type="text" id="company" name="company" placeholder="Nome da sua empresa">
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="service">Serviço de Interesse</label>
-                        <select id="service" name="service">
-                            <option value="">Selecione um serviço</option>
-                            <option value="gestao-documental">Gestão Documental</option>
-                            <option value="elaboracao-propostas">Elaboração de Propostas</option>
-                            <option value="acompanhamento-juridico">Acompanhamento Jurídico</option>
-                            <option value="outro">Outro</option>
+                        <label for="revenue">Faturamento Mensal Aproximado</label>
+                        <select id="revenue" name="revenue" required>
+                            <option value="">Selecione seu faturamento</option>
+                            <option value="ate-50k">Até R$ 50.000</option>
+                            <option value="50k-200k">R$ 50.000 - R$ 200.000</option>
+                            <option value="200k-500k">R$ 200.000 - R$ 500.000</option>
+                            <option value="500k-1M">R$ 500.000 - R$ 1.000.000</option>
+                            <option value="acima-1M">Acima de R$ 1.000.000</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" placeholder="Conte-nos como podemos ajudar sua empresa..."></textarea>
+                        <label for="challenge">Qual Sua Maior Dor Atual?</label>
+                        <select id="challenge" name="challenge" required>
+                            <option value="">Selecione seu maior problema</option>
+                            <option value="impostos-altos">Impostos Estão Me Estrangulando</option>
+                            <option value="dividas-bancarias">Dívidas Bancárias Fora de Controle</option>
+                            <option value="patrimonio-risco">Meu Patrimônio Está em Risco</option>
+                            <option value="empresa-estagnada">Minha Empresa Não Cresce</option>
+                            <option value="outro">Outro Problema</option>
+                        </select>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary form-submit-btn">
-                         <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                    <div class="form-group">
+                        <label for="message">Conte Sua Situação (Opcional)</label>
+                        <textarea id="message" name="message" placeholder="Descreva brevemente o que mais te preocupa no momento..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-danger form-submit-btn">
+                         <i class="fas fa-bolt"></i> Quero Minha Análise Personalizada Grátis
                     </button>
+                    
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gray-light); text-align: center;">
+                        <i class="fas fa-lock"></i> Seus dados estão 100% seguros. Não fazemos spam.
+                    </p>
                 </form>
             </div>
         </div>
@@ -1051,26 +1496,26 @@
                         <i class="fas fa-crown"></i>
                         ARX <span>Assessoria</span>
                     </div>
-                    <p class="footer-description">Especialistas em licitações públicas, transformando complexidade burocrática em resultados tangíveis para sua empresa.</p>
+                    <p class="footer-description">Especialistas em proteger patrimônios, resolver passivos complexos e alavancar negócios através de estratégias personalizadas de alto impacto.</p>
                 </div>
 
                 <div>
-                    <h3 class="footer-heading">Serviços</h3>
+                    <h3 class="footer-heading">Nossas Armas Secretas</h3>
                     <ul class="footer-links">
-                        <li><a href="#servicos">Gestão Documental</a></li>
-                        <li><a href="#servicos">Elaboração de Propostas</a></li>
-                        <li><a href="#servicos">Acompanhamento Jurídico</a></li>
-                        <li><a href="#servicos">Consultoria Estratégica</a></li>
+                        <li><a href="#servicos">Blindagem Fiscal de Alto Impacto</a></li>
+                        <li><a href="#servicos">Resolução de Dívidas com "Golpe de Mestre"</a></li>
+                        <li><a href="#servicos">Proteção de Patrimônio "Inquebrável"</a></li>
+                        <li><a href="#servicos">Expansão com "Vantagem Injusta"</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="footer-heading">Contato</h3>
+                    <h3 class="footer-heading">Fale Com um Especialista</h3>
                     <ul class="footer-links">
                         <li><a href="https://goo.gl/maps/example" target="_blank"><i class="fas fa-map-marker-alt"></i> Ponta Grossa, PR</a></li>
                         <li><a href="tel:+5542933004048"><i class="fas fa-phone"></i> (42) 9 3300-4048</a></li>
                         <li><a href="mailto:arxassessoriaempresaria@gmail.com"><i class="fas fa-envelope"></i> arxassessoriaempresaria@gmail.com</a></li>
-                        <li><a href="https://api.whatsapp.com/send?phone=5542933004048"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5542933004048" class="whatsapp-link"><i class="fab fa-whatsapp"></i> WhatsApp Urgente</a></li>
                     </ul>
                 </div>
             </div>
@@ -1083,16 +1528,63 @@
 
     <!-- WhatsApp Button -->
     <div class="whatsapp-float">
-        <a href="https://api.whatsapp.com/send?phone=5542933004048&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20ARX%20Assessoria" target="_blank" class="whatsapp-btn">
+        <a href="https://api.whatsapp.com/send?phone=5542933004048&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20ARX%20Assessoria" target="_blank" class="whatsapp-btn" id="whatsappFloatBtn">
             <i class="fab fa-whatsapp"></i>
             <div class="whatsapp-text">
-                <span>Fale conosco</span>
-                <span>Via WhatsApp</span>
+                <span>Proteção Imediata</span>
+                <span>Fale Conosco</span>
             </div>
         </a>
     </div>
 
     <script>
+        // Menu mobile
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+            
+            // Alterar ícone do menu
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        overlay.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            // Restaurar ícone do menu
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+        
+        // Fechar menu ao clicar em um link
+        const navItems = document.querySelectorAll('.nav-links a');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+                
+                // Restaurar ícone do menu
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
         // Form submission via WhatsApp
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -1102,25 +1594,30 @@
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const company = document.getElementById('company').value;
-            const service = document.getElementById('service').value;
+            const revenue = document.getElementById('revenue').value;
+            const challenge = document.getElementById('challenge').value;
             const message = document.getElementById('message').value;
             
             // Criar mensagem para WhatsApp
-            let whatsappMessage = `Olá, gostaria de mais informações sobre os serviços da ARX Assessoria.%0A%0A`;
+            let whatsappMessage = `Olá, gostaria da ANÁLISE ESTRATÉGICA PERSONALIZADA GRATUITA da ARX.%0A%0A`;
             whatsappMessage += `*Nome:* ${name}%0A`;
             whatsappMessage += `*E-mail:* ${email}%0A`;
-            whatsappMessage += `*CNPJ:* ${phone}%0A`;
+            whatsappMessage += `*WhatsApp:* ${phone}%0A`;
             
             if (company) {
                 whatsappMessage += `*Empresa:* ${company}%0A`;
             }
             
-            if (service) {
-                whatsappMessage += `*Serviço de Interesse:* ${service}%0A`;
+            if (revenue) {
+                whatsappMessage += `*Faturamento:* ${revenue}%0A`;
+            }
+            
+            if (challenge) {
+                whatsappMessage += `*Maior Desafio:* ${challenge}%0A`;
             }
             
             if (message) {
-                whatsappMessage += `*Mensagem:* ${message}%0A`;
+                whatsappMessage += `*Situação:* ${message}%0A`;
             }
             
             // Abrir WhatsApp
@@ -1169,6 +1666,26 @@
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
             observer.observe(el);
+        });
+        
+        // WhatsApp function para o botão do header
+        document.getElementById('headerWhatsappBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open('https://api.whatsapp.com/send?phone=5542933004048&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20ARX%20Assessoria', '_blank');
+        });
+        
+        // WhatsApp function para o botão flutuante
+        document.getElementById('whatsappFloatBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open('https://api.whatsapp.com/send?phone=5542933004048&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20ARX%20Assessoria', '_blank');
+        });
+        
+        // WhatsApp function para links no footer
+        document.querySelectorAll('.whatsapp-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.open('https://api.whatsapp.com/send?phone=5542933004048&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20ARX%20Assessoria', '_blank');
+            });
         });
     </script>
 </body>
